@@ -15,10 +15,11 @@ int main(void)
 		printf("%4d",a[i]);
 	}
 
-	for (pass = 1; pass < SIZE; ++pass)
-	{
+	do{
+		for (pass = 1; pass < SIZE; ++pass)
+		{
 		
-		do {
+		
 			for (i = 0; i < SIZE - d; ++i)
 			{
 				if (a[i] > a[i + 1])
@@ -30,9 +31,10 @@ int main(void)
 				}
 				b++;
 			}
-		} while (c > b);
+		
 		d++;
-	}
+		}
+	} while (c > b);
 	puts("\nData items in ascending order");
 	for (i = 0; i < SIZE;++i) 
 	{
